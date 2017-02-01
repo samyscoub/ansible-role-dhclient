@@ -1,15 +1,15 @@
 ---
-galaxy_infor:
-author: Mark Snelling
-description: An Ansible role for configuring dhclient.
-company: Solaise Capital Management LLP.
-license: Apache
-min_ansible_version: 2.0.0
-platforms:
-  - name: ubuntu
-versions:
-  - name: xenial
-categories:
-  - dhcp
-  - dhclient
-dependencies:
+galaxy_info:
+  author: Mark Snelling
+  description: An Ansible role for configuring dhclient.
+  company: Solaise Capital Management LLP.
+  license: Apache
+  min_ansible_version: 2.0.0
+  platforms:
+    - name: ubuntu
+  versions:
+    - name: xenial
+  categories:
+    - dhcp
+    - dhclient
+  dependencies:
