@@ -1,0 +1,23 @@
+---
+dhclient_interfaces:
+  - eth0
+dhclient_request:
+#  - domain-name
+#  - domain-search
+  - broadcast-address
+#  - host-name
+  - routers
+  - subnet-mask
+  - time-offset
+#  - dhcp6.name-servers
+#  - dhcp6.domain-search
+#  - dhcp6.fqdn
+#  - dhcp6.sntp-servers
+#  - netbios-name-servers
+#  - netbios-scope
+  - interface-mtu
+  - ntp-servers
+dhclient_require:
+  - subnet-mask
+#  - domain-name-servers
+

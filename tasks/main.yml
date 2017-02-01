@@ -1,0 +1,25 @@
+---
+- name: template | generate the /etc/hosts file
+  template:
+    src=hosts.j2
+    dest='/etc/hosts'
+    owner=root
+    group=root
+    mode=0644
+
+- name: template | update the /etc/dhcp/dhclient.conf file
+  template:
+    src=dhclient.conf.j2
+    dest='/etc/dhcp/dhclient.conf'
+    owner=root
+    group=root
+    mode=0644
+  with_items: "{{ dhclient_interfaces }}"
+  register: dhclient_config
+
+- name: service | restart networking service
+  service:
+    name=networking
+    state=restarted
+  register: dhclient_networking
+  when: dhclient_config.changed
