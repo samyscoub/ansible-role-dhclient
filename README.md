@@ -1,7 +1,7 @@
 # ansible-role-dhclient
 An ansible role for configuring dhclient.
 # Requirements
-None
+None.
 # Role Variables
 | Variable | Description | Default |
 |----------|-------------|---------|
@@ -12,7 +12,8 @@ None
 # Dependencies
 None
 # Example Playbook
-```yaml - hosts: localhost
+```yaml 
+- hosts: localhost
   vars:
     dhclient_host_name: myhost
     dhclient_domain_name: mydomain.com
