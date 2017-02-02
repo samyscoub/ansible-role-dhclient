@@ -1,6 +1,9 @@
 ---
+# Interfaces to configure
 dhclient_interfaces:
   - eth0
+
+# List of fields to request or require from DHCP
 dhclient_request:
 #  - domain-name
 #  - domain-search

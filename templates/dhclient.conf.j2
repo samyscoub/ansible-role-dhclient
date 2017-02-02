@@ -1,4 +1,4 @@
-interface "eth0" {
+interface "{{ item }}" {
 {% if 'host-name' not in dhclient_request %}
 {%   if dhclient_host_name is defined %}
     supersede host-name "{{ dhclient_host_name }}.{{ dhclient_domain_name }}";
