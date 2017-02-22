@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/solaise/ansible-role-dhclient.svg?branch=master)](https://travis-ci.org/solaise/ansible-role-dhclient)
 # ansible-role-dhclient
 An ansible role for configuring dhclient.
 # Requirements
