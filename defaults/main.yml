@@ -31,3 +31,5 @@ dhclient_require:
   - subnet-mask
 #  - domain-name-servers
 
+# manage /etc/hosts file
+dhclient_manage_hosts_file: false
