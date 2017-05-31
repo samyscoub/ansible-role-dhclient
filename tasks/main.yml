@@ -1,4 +1,12 @@
 ---
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "../vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yml"
+    - "../vars/{{ ansible_distribution }}.yml"
+    - "../vars/{{ ansible_os_family }}.yml"
+    - "../vars/default.yml"
+  when: network_service_name is not defined or network_service_name is not defined
+
 - name: dhclient | generate the /etc/hosts file
   template:
     src: hosts.j2
@@ -19,7 +27,7 @@
 
 - name: dhclient | restart networking service
   service:
-    name: networking
+    name: "{{ network_service_name }}"
     state: restarted
   register: dhclient_networking
   when: dhclient_config.changed
