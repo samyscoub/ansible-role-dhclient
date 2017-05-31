@@ -1,5 +1,9 @@
 ---
-dhclient_host_name: ansible_hostname
+# Dhcp hostname
+dhclient_host_name: "{{ ansible_hostname }}"
+
+# Dhcp domain
+dhclient_domain_name: "{{ ansible_domain | default('localdomain') }}"
 
 # Interfaces to configure
 dhclient_interfaces:
@@ -7,10 +11,10 @@ dhclient_interfaces:
 
 # List of fields to request or require from DHCP
 dhclient_request:
-#  - domain-name
+  - domain-name
 #  - domain-search
   - broadcast-address
-#  - host-name
+  - host-name
   - routers
   - subnet-mask
   - time-offset
@@ -22,6 +26,7 @@ dhclient_request:
 #  - netbios-scope
   - interface-mtu
   - ntp-servers
+  
 dhclient_require:
   - subnet-mask
 #  - domain-name-servers
