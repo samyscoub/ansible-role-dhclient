@@ -1,4 +1,6 @@
 ---
+dhclient_host_name: ansible_hostname
+
 # Interfaces to configure
 dhclient_interfaces:
   - eth0
