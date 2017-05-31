@@ -14,6 +14,7 @@
     owner: root
     group: root
     mode: 0644
+  when: dhclient_manage_hosts_file
 
 - name: dhclient | update the /etc/dhcp/dhclient.conf file
   template:
